@@ -15,7 +15,7 @@ import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 class ApiProvider {
   final String _baseURL = "https://applojong.com/api";
   final String _userToken = "O7Kw5E2embxod5YtL1h1YsGNN7FFN8wIxPYMg6J9zFjE6Th9oDssEsFLVhxf";
-
+//a
   late Dio _dio;
   late CacheManager _cacheManager;
 
