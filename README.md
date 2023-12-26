@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 # lojong_app
 
-A new Flutter project.
+Teste prático.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+### Nexus One
+![Nexus One Screenshot](screenshot/nexus_one.png)
 
-A few resources to get you started if this is your first Flutter project:
+### Nexus 4
+![Nexus 4 Screenshot](screenshots/nexus_four.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# lojong
-Teste Pratico 
->>>>>>> 422c502d6f238cbd11a64cfc657312401871b8a9

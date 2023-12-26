@@ -1,4 +1,4 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:lojong_app/helpers/widgets/article_widget.dart';
 import 'package:lojong_app/helpers/widgets/quote_widget.dart';
 import 'package:lojong_app/helpers/widgets/video_widget.dart';
@@ -40,7 +40,7 @@ class _InsightsState extends State<Insights> {
     return GestureDetector(
       onTap: () => _onItemTapped(index),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 30),
+        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
         decoration: BoxDecoration(
           color: isSelected ? Colors.white : Colors.transparent,
           borderRadius: BorderRadius.circular(20),
@@ -67,6 +67,7 @@ class _InsightsState extends State<Insights> {
           children: [
             GestureDetector(
               onTap: () {
+              
               },
               child: Container(
                 padding: EdgeInsets.all(4),
@@ -80,23 +81,29 @@ class _InsightsState extends State<Insights> {
                 ),
               ),
             ),
-            const SizedBox(width: 110),
-            const Center(
-              child: Text(
-                'INSPIRAÇÕES',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15, 
+            const SizedBox(width: 8),
+            const Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(right: 40),
+                child: Center(
+                  child: Text(
+                    'INSPIRAÇÕES',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
+                  ),
                 ),
               ),
             ),
           ],
         ),
+        centerTitle: true, // Centraliza o título
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(60),
           child: Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Container(
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(199, 128, 128, 1),
@@ -104,7 +111,7 @@ class _InsightsState extends State<Insights> {
               ),
               padding: const EdgeInsets.all(8),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   _buildNavItem(0, 'VÍDEOS'),
                   _buildNavItem(1, 'ARTIGOS'),
@@ -129,9 +136,11 @@ class _InsightsState extends State<Insights> {
               itemBuilder: (context, index) {
                 final video = insightsController.videos[index];
                 return VideoWidget(
-                    name: video.name!,
-                    description: video.description!,
-                    videoUrl: video.url!, thumbnailUrl: video.imageUrl!);
+                  name: video.name!,
+                  description: video.description!,
+                  videoUrl: video.url!,
+                  thumbnailUrl: video.imageUrl!,
+                );
               },
             ),
           ),
@@ -148,7 +157,7 @@ class _InsightsState extends State<Insights> {
               },
             ),
           ),
-         QuotesPage(quotes: insightsController.quotes),
+          QuotesPage(quotes: insightsController.quotes),
         ],
       ),
     );

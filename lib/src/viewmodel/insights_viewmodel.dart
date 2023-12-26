@@ -123,7 +123,7 @@ class InsightsViewModel extends ChangeNotifier {
                 .map((item) => Video.fromJson(item))
                 .toList();
 
-            // Faça o download e cache das imagens dos vídeos
+          
             for (var video in videoList) {
               await apiProvider.downloadAndCacheImage(video.imageUrl!);
             }
