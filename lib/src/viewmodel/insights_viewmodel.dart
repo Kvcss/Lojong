@@ -24,7 +24,7 @@ class InsightsViewModel extends ChangeNotifier {
     try {
       isLoading = true;
       notifyListeners();
-
+//s
       bool isInternetAvailable = await apiProvider.isInternetAvailable();
 
       if (isInternetAvailable) {
